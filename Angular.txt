@@ -1,0 +1,28 @@
+Manuel angular
+
+@Shared dans un dossier que je veux
+Pour creer un component
+----ng g c nomCompement
+----ng g m nomModule --flat
+	ici faire les imports et les exports
+
+Les service
+ng g s nomService
+
+Routing
+ng g m app-routing --flat --module=nomCompnent
+
+//header
+//footer
+//sidebar
+
+              "src/assets/jquery/jquery.min.js",
+              "src/assets/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "src/assets/dist/js/adminlte.min.js"
+
+
+              "src/assets/fontawesome-free/css/all.min.css",
+              "src/assets/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/assets/dist/css/adminlte.min.css",
+              "src/styles.css"

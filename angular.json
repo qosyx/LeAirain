@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LeAirain": {
+    "projetpharma": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/LeAirain",
+            "outputPath": "dist/projetpharma",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,18 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fontawesome-free/css/all.min.css",
+              "src/assets/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/assets/dist/css/adminlte.min.css",
+              "src/assets/icheck-bootstrap/icheck-bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/jquery/jquery.min.js",
+              "src/assets/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "src/assets/dist/js/adminlte.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "LeAirain:build"
+            "browserTarget": "projetpharma:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "LeAirain:build:production"
+              "browserTarget": "projetpharma:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LeAirain:build"
+            "browserTarget": "projetpharma:build"
           }
         },
         "test": {
@@ -111,15 +120,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "LeAirain:serve"
+            "devServerTarget": "projetpharma:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "LeAirain:serve:production"
+              "devServerTarget": "projetpharma:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "LeAirain"
+  "defaultProject": "projetpharma"
 }
