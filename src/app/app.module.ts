@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { DevExtremeModule } from 'devextreme-angular';
 import { TypeproduitComponent } from './typeproduit/typeproduit.component';
+import { StockComponent } from './stock/stock.component';
+import { PublicComponent } from './public/public.component';
 
 @NgModule({
   declarations: [

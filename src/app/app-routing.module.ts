@@ -11,6 +11,8 @@ const routes: Routes = [
   {path: 'product',  loadChildren: './product/product.module#ProductModule'},
   {path: 'order',  loadChildren: './order/order.module#OrderModule'},
   {path: 'typeproduit',  loadChildren: './typeproduit/typeproduit.module#TypeproduitModule'},
+  {path: 'stock',  loadChildren: './stock/stock.module#StockModule'},
+  {path: 'public',  loadChildren: './public/public.module#PublicModule'},
 
   ];
 @NgModule({
