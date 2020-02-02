@@ -28,6 +28,8 @@
               "src/assets/overlayScrollbars/css/OverlayScrollbars.min.css",
               "src/assets/dist/css/adminlte.min.css",
               "src/assets/icheck-bootstrap/icheck-bootstrap.min.css",
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "node_modules/devextreme/dist/css/dx.light.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -57,8 +59,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "60mb",
+                  "maximumError": "60mb"
                 },
                 {
                   "type": "anyComponentStyle",

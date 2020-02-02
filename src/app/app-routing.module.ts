@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'office', loadChildren: './office/office.module#OfficeModule'},
   {path: 'product',  loadChildren: './product/product.module#ProductModule'},
   {path: 'order',  loadChildren: './order/order.module#OrderModule'},
+  {path: 'typeproduit',  loadChildren: './typeproduit/typeproduit.module#TypeproduitModule'},
 
   ];
 @NgModule({
