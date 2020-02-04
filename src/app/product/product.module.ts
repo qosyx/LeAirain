@@ -13,7 +13,7 @@ import { DxDataGridModule } from 'devextreme-angular';
 
 
 @NgModule({
-  declarations: [ProductComponent, HeaderComponent, FooterComponent, SidebarComponent],
+  declarations: [ProductComponent],
   imports: [
     CommonModule,
     DxDataGridModule,
@@ -22,7 +22,7 @@ import { DxDataGridModule } from 'devextreme-angular';
     ServiceModule.forRoot(),
     ProductRoutingModule
   ],
-  exports : [HeaderComponent, FooterComponent, SidebarComponent]
+  exports : []
 })
 export class ProductModule {
 

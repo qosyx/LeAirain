@@ -19,6 +19,7 @@ export class TypeproduitService {
    }
 
 SaveTypeProduit(postdata): Observable<any> {
+
     let params = new HttpParams();
     return this.http.post(environment.apiUrl + 'typeproduit', postdata, {
       headers: new HttpHeaders({

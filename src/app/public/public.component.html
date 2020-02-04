@@ -1,9 +1,14 @@
 <body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-open" style="height: auto;">
   <div class="wrapper">
     <app-header></app-header>
-    <app-sidebar></app-sidebar>
-
-
+    <app-sidebar [myselectionText]="name" (sidebarclick)="sidebarclick($event)"></app-sidebar>
+    <app-caisse *ngIf="item === 1"></app-caisse>
+    <app-office *ngIf="item === 2"></app-office>
+    <app-typeproduit *ngIf="item === 3"></app-typeproduit>
+    <app-typepersonnel *ngIf="item === 4"></app-typepersonnel>
+    <app-register *ngIf="item === 5"></app-register>
+    <app-product *ngIf="item === 6"></app-product>
+    <app-stock *ngIf="item === 7"></app-stock>
     <app-footer></app-footer>
     <div id="sidebar-overlay"></div>
   </div>

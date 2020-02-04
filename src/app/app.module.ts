@@ -12,8 +12,8 @@ import { PublicComponent } from './public/public.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-  ],
+    AppComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

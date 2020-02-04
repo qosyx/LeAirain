@@ -1,7 +1,5 @@
-<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-open" style="height: auto;">
   <div class="wrapper">
-    <app-header></app-header>
-    <app-sidebar></app-sidebar>
+
     <div class="content-wrapper" style="min-height: 469px;">
       <!-- Content Header (Page header) -->
       <div class="content-header">
@@ -98,8 +96,8 @@
                     <dxo-selection [selectAllMode]="allMode" [showCheckBoxesMode]="checkBoxesMode" mode="multiple">
                     </dxo-selection>
                     <dxo-filter-row [visible]="true"></dxo-filter-row>
-                    <dxo-paging [pageSize]="12"></dxo-paging>
-                    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[8, 12, 20]"></dxo-pager>
+                    <dxo-paging [pageSize]="5"></dxo-paging>
+                    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 15]"></dxo-pager>
                   </dx-data-grid>
                 </div>
                 <!-- /.card-header -->
@@ -134,8 +132,6 @@
     </aside>
     <!-- end Control sidebar content goes here -->
 
-    <app-footer></app-footer>
     <div id="sidebar-overlay"></div>
   </div>
-</body>
 

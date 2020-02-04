@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
-  constructor() { }
+  @Output() sidebarclick: EventEmitter<any> = new EventEmitter<any>();
+  @Input() myselectionText;
+selectionText;
+  constructor() {
+  }
 
   ngOnInit() {
+
+    this.selectionText = this.myselectionText;
+    console.log(this.myselectionText);
+  }
+  OnClick(event) {
+    console.log(event);
+
+    this.selectionText = event;
+    this.sidebarclick.emit(event);
   }
 
 }
