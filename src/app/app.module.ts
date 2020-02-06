@@ -1,3 +1,4 @@
+import { VariablesGlobales } from './variableGlobales';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -6,10 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { DevExtremeModule } from 'devextreme-angular';
-import { TypeproduitComponent } from './typeproduit/typeproduit.component';
-import { StockComponent } from './stock/stock.component';
-import { PublicComponent } from './public/public.component';
-
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent
@@ -20,9 +19,11 @@ import { PublicComponent } from './public/public.component';
     FormsModule,
     DevExtremeModule,
     NgSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    SimpleNotificationsModule.forRoot()
   ],
-  providers: [],
+  providers: [VariablesGlobales],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

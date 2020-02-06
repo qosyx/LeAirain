@@ -1,5 +1,5 @@
 import { PersonnelService } from './../../service/personnel.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
   typepersonnelist;
   typepersonnelid;
   personnel = { code: '', nom: '', prenom: '', login: '', password: '' };
@@ -41,5 +42,19 @@ export class RegisterComponent implements OnInit {
       this.typepersonnelid = '';
     });
   }
+
+// verification que le user n'existe deja pas
+checkIfUserExiste(codeValue) {
+  let postData = {code : ''};
+  postData.code = codeValue;
+  this.personnelSvc.getAcces(postData).subscribe(rs => {
+    console.log(rs);
+
+    if (rs.length >= 1) {
+      this.personnel.code = 'L\'utilisateur existe deja';
+    }
+  });
+
+}
 
 }

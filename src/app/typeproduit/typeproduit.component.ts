@@ -11,6 +11,9 @@ listOfTypeProduit;
 typeproduit  = { code: '', libelle: ''};
 allMode: string;
 checkBoxesMode: string;
+selectedRow ;
+btnUpdate = 0;
+btnSup = 0;
   constructor(public typeProdSvc: TypeproduitService) {
     this.allMode = 'allPages';
     this.checkBoxesMode = 'onClick';
@@ -20,6 +23,7 @@ checkBoxesMode: string;
   }
 
   ngOnInit() {
+
   }
 
   SaveTypeProduit() {
@@ -38,5 +42,25 @@ getAllTypeProduit() {
     this.listOfTypeProduit =res
   });
 }
+onSelectionChanged(event) {
+  console.log(event.selectedRowKeys);
 
+  if (event.selectedRowKeys.length === 1) {
+    this.typeproduit.code = event.selectedRowKeys[0].code;
+    this.typeproduit.libelle = event.selectedRowKeys[0].libelle;
+    this.btnUpdate = 1;
+
+  }   else {
+    this.btnUpdate = 0;
+    this.typeproduit.code = '';
+    this.typeproduit.libelle = '';
+  }
+  if (event.selectedRowKeys.length > 1) {
+    this.btnSup = 1;
+  }   else {
+    this.btnSup = 0;
+  }
+
+}
+// btnSup
 }

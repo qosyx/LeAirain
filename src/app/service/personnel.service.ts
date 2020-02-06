@@ -19,7 +19,25 @@ export class PersonnelService {
       })
     });
   }
-
+  getTypePersonnelByCriteria(postdata): Observable<any> {
+    let params = new HttpParams();
+    return this.http.post(environment.apiUrl + 'typepersonnel/gettypepersonnelByCriteria', postdata, {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    });
+  }
+  // permet de se connecter à l'application et aussi de verifier si le user existe deja
+  getAcces(postdata): Observable<any> {
+    let params = new HttpParams();
+    return this.http.post(environment.apiUrl + 'personnel/getPersonnelByCriteria', postdata, {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    });
+  }
   SaveTypePersonnel(postdata): Observable<any> {
 
     let params = new HttpParams();

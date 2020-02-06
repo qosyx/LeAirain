@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StockRoutingModule } from './stock-routing.module';
 import { DxDataGridModule } from 'devextreme-angular';
 import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     StockRoutingModule,
     DxDataGridModule,
     FormsModule,
+    NgSelectModule
   ],
   exports: [StockComponent]
 })

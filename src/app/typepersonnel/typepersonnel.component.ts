@@ -41,4 +41,16 @@ export class TypepersonnelComponent implements OnInit {
     });
   }
 
+  checkIfTypePErsonnelExiste(code){
+    let postData = {code : ''};
+    postData.code = code;
+    this.personnelSvc.getTypePersonnelByCriteria(postData).subscribe(rs => {
+      console.log(rs);
+
+      if (rs.length >= 1) {
+        this.typePersonnel.code = 'Ce code existe deja';
+      }
+    });
+  }
+
 }

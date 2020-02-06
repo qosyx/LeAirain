@@ -45,7 +45,7 @@
           <form #TypePersonnelForm="ngForm" id="TypePersonnelForm" (ngSubmit)="SaveTypePersonnel()" class="form-horizontal">
             <label for="lblcodeProduit">Code de la Catégorie</label>
             <div class="input-group mb-3">
-              <input required [(ngModel)]="typePersonnel.code" name="code" type="text" class="form-control"
+              <input required [(ngModel)]="typePersonnel.code" (ngModelChange)="checkIfTypePErsonnelExiste($event)" name="code" type="text" class="form-control"
                 id="codeProduit" placeholder="Enter le code du produit" />
             </div>
 

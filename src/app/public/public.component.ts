@@ -1,6 +1,6 @@
+import { VariablesGlobales } from './../variableGlobales';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-public',
   templateUrl: './public.component.html',
@@ -9,12 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 export class PublicComponent implements OnInit {
   item = 1;
   name;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public varGlo: VariablesGlobales) { }
 
   ngOnInit() {
 
     this.name = this.route.snapshot.params.id;
-    console.log(this.name);
+    console.log(this.varGlo.login);
     switch (this.name) {
       case 'caisse':
       case 'Caisse':

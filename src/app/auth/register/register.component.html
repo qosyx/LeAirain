@@ -9,7 +9,7 @@
         <p class="login-box-msg">Enregistrer un personnel</p>
         <form #PersonnelForm="ngForm" id="P" (ngSubmit)="SavePersonnel()" class="form-horizontal">
           <div class="input-group mb-3">
-            <input required [(ngModel)]="personnel.code" name="code" type="text" class="form-control" placeholder="Code du personnel">
+            <input (ngModelChange)="checkIfUserExiste($event)" required [(ngModel)]="personnel.code" name="code" type="text" class="form-control" placeholder="Code du personnel">
             <div class="input-group-append">
               <div class="input-group-text">
                 <!-- <span class="fas fa-user"></span> -->
@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input [(ngModel)]="personnel.nom" name="nom" type="text" class="form-control" placeholder="Nom">
+            <input   [(ngModel)]="personnel.nom" name="nom" type="text" class="form-control" placeholder="Nom">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -40,7 +40,7 @@
               </div>
             </div>
           </div>
-          <label for="lblcodetypePersonnel">{{typepersonnelid}}</label>
+          <label for="lblcodetypePersonnel">Fonction</label>
           <ng-select [items]="typepersonnelist" bindLabel="libelle" autofocus [clearable]="true"
             [searchable]="true" bindValue="typepersonnelid" [(ngModel)]="typepersonnelid" name="typepersonnelid">
           </ng-select>
@@ -49,7 +49,7 @@
           <div class="row">
             <div class="col-6">
               <button type="submit" class="btn btn-primary btn-block"
-                [disabled]="PersonnelForm.invalid">Enregistrer</button>
+                [disabled]="PersonnelForm.invalid" >Enregistrer</button>
             </div>
             <!-- /.col -->
           </div>
